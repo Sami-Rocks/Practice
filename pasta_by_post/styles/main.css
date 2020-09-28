@@ -1,0 +1,447 @@
+body {
+  color: #000201;
+  margin: 0;
+  padding: 0;
+  font-family: 'Alice', serif;
+  background: url("./../images/Background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body a {
+  text-decoration: none;
+  color: #000201;
+}
+
+header {
+  height: 50px;
+}
+
+header .logo {
+  display: none;
+}
+
+header .hamburger-menu {
+  position: relative;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+  height: 20px;
+}
+
+header .hamburger-menu .icon svg {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 15px 30px;
+}
+
+header .hamburger-menu:hover ul {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+header ul {
+  -webkit-transition: .5s all ease;
+  transition: .5s all ease;
+  visibility: hidden;
+  opacity: 0;
+  position: relative;
+  margin-left: 0px;
+  list-style: none;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: white;
+  margin-top: -10px;
+  padding: 20px;
+}
+
+header ul li a {
+  display: block;
+  position: relative;
+  padding: 4px 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px 4px;
+}
+
+header ul li .active {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+header ul li a::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  top: 100%;
+  left: 0;
+  background: #F5BF16;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+header ul li a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.landing-wrap {
+  margin: 20px auto;
+  width: 70%;
+  text-align: center;
+  position: relative;
+}
+
+.landing-wrap .landing h1 {
+  font-size: 40px;
+}
+
+.landing-wrap .landing .underline img {
+  position: relative;
+  height: 30px;
+  top: -40px;
+  left: 50px;
+}
+
+.landing-wrap .landing p {
+  margin-top: -30px;
+  font-size: 12px;
+}
+
+.cards {
+  width: 80%;
+  margin: 50px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.cards .card {
+  background: white;
+  border-radius: 2px;
+  padding: 7px 20px;
+  cursor: pointer;
+  -webkit-transition: .5s all ease;
+  transition: .5s all ease;
+}
+
+.cards .card .card-title {
+  font-size: 11px;
+}
+
+.cards .card .card-value {
+  font-size: 15;
+  margin-top: -5px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.cards .card .plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+}
+
+.cards .card .plan input {
+  display: none;
+}
+
+.cards .card .plan label {
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #b2b2b2;
+  font-size: 15px;
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: block;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2px 8px;
+  -webkit-transition: .5s all ease;
+  transition: .5s all ease;
+}
+
+.cards .card .plan label:hover {
+  background: white;
+}
+
+.cards .card .plan input:checked + label {
+  color: white;
+  border: 1px solid #442497;
+  background-color: #442497;
+}
+
+.cards .card:hover {
+  background: #efeef3;
+}
+
+.food-description {
+  width: 80%;
+  background: white;
+  border-radius: 2px;
+  margin: 40px auto;
+}
+
+.food-description .food-image {
+  display: none;
+}
+
+.food-description .food-title-details {
+  padding: 40px 25px;
+}
+
+.food-description .food-title-details .food-title {
+  border-bottom: 1px solid #aaa;
+}
+
+.food-description .food-title-details .food-title h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.food-description .food-title-details .food-title p {
+  margin-top: -5px;
+  font-weight: bold;
+}
+
+.food-description .food-title-details .food-details {
+  margin-top: 30px;
+  font-size: 13px;
+}
+
+.food-description .food-title-details .food-price-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.food-description .food-title-details .food-price-info .food-price {
+  font-weight: bold;
+}
+
+.food-description .food-title-details .food-price-info .food-price sub {
+  font-size: 10px;
+}
+
+.food-description .food-title-details .food-price-info .food-info {
+  font-weight: bold;
+  padding-top: 5px;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+  -webkit-transition: .5s all ease;
+  transition: .5s all ease;
+}
+
+.food-description .food-title-details .food-price-info .food-info:hover {
+  color: #EAE8F5;
+}
+
+@media only screen and (min-width: 600px) {
+  header {
+    height: 50px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .logo {
+    display: block;
+  }
+  header .hamburger-menu .icon {
+    display: none;
+  }
+  header ul {
+    background: red;
+    display: block;
+    -webkit-transition: .5s all ease;
+    transition: .5s all ease;
+    visibility: visible;
+    opacity: 1;
+    margin-left: 0px;
+    list-style: none;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 0px;
+    padding: 20px;
+    background: none;
+  }
+  header ul li {
+    float: left;
+  }
+  header ul li a {
+    margin: 0px 8px;
+    display: block;
+    padding: 0px 0;
+    -webkit-transition: .5s;
+    transition: .5s;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  header ul li a.active::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  header ul li a::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background: #F5BF16;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+  }
+  header ul li a:hover::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+  .landing-wrap {
+    width: 40%;
+  }
+  .landing-wrap .landing h1 {
+    font-size: 50px;
+  }
+  .landing-wrap .landing .underline img {
+    height: 50px;
+    top: -60px;
+  }
+  .landing-wrap .landing p {
+    margin-top: -50px;
+    padding: 0 40px;
+    font-size: 14px;
+  }
+  .cards {
+    margin: 50px auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 2px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .cards .card {
+    min-width: 21%;
+  }
+  .food-description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .food-description .food-image {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+  .food-description .food-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .food-description .food-title-details {
+    width: 50%;
+    padding: 40px 25px;
+  }
+  .food-description .food-title-details .food-title {
+    border-bottom: 1px solid #aaa;
+  }
+  .food-description .food-title-details .food-title h3 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .food-description .food-title-details .food-title p {
+    margin-top: -5px;
+    font-weight: bold;
+  }
+  .food-description .food-title-details .food-details {
+    margin-top: 30px;
+    font-size: 13px;
+  }
+  .food-description .food-title-details .food-price-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .food-description .food-title-details .food-price-info .food-price {
+    font-weight: bold;
+  }
+  .food-description .food-title-details .food-price-info .food-price sub {
+    font-size: 10px;
+  }
+  .food-description .food-title-details .food-price-info .food-info {
+    font-weight: bold;
+    padding-top: 5px;
+    font-size: 12px;
+    text-decoration: underline;
+  }
+}
+/*# sourceMappingURL=main.css.map */
